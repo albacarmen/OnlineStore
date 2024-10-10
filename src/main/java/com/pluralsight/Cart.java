@@ -1,2 +1,4 @@
-package com.pluralsight;public class Cart {
+package com.pluralsight;
+
+public class Cart {
 }
