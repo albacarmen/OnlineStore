@@ -47,14 +47,20 @@ public class Product {
     }
 
     public static void loadInventory(String fileName, ArrayList<Store> inventory) {
-        // This method should read a CSV file with product information and
-        // populate the inventory ArrayList with com.pluralsight.Product objects. Each line
-        // of the CSV file contains product information in the following format:
-        //
-        // id,name,price
-        //
-        // where id is a unique string identifier, name is the product name,
-        // price is a double value representing the price of the product
+        public static void loadInventory(String fileName, ArrayList<Product> inventory) {
+            try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+                String line;
+                while ((line = br.readLine()) != null) {
+                    String[] values = line.split(",");
+                    String id = values[0];
+                    String name = values[1];
+                    double price = Double.parseDouble(values[2]);
+                    inventory.add(new Product(id, name, price));
+                }
+            } catch (IOException e) {
+                System.out.println("Error loading inventory: " + e.getMessage());
+            }
+        }
     }
 
     public static void displayProducts(ArrayList<Store> inventory, ArrayList<Store> cart, Scanner scanner) {
