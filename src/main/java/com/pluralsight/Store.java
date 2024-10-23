@@ -68,12 +68,12 @@ public class Product {
             }
         }
 
-    public static void displayProducts(ArrayList<Store> inventory, ArrayList<Store> cart, Scanner scanner) {
-        // This method should display a list of products from the inventory,
-        // and prompt the user to add items to their cart. The method should
-        // prompt the user to enter the ID of the product they want to add to
-        // their cart. The method should
-        // add the selected product to the cart ArrayList.
+    private void displayProducts() {
+            System.out.println("Available products:");
+            for (Product product : products) {
+                System.out.println(product);
+            }
+        }
     }
 
     public static void displayCart(ArrayList<Store> cart, Scanner scanner, double totalAmount) {
