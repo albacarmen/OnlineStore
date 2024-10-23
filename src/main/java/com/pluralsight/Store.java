@@ -46,22 +46,27 @@ public class Product {
         }
     }
 
-    public static void loadInventory(String fileName, ArrayList<Store> inventory) {
-        public static void loadInventory(String fileName, ArrayList<Product> inventory) {
-            try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+    private void loadProducts(String fileName) {
+            File file = new File(fileName);
+            if (!file.exists()) {
+                System.out.println("No products available.");
+                return;
+            }
+
+            try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
                 String line;
-                while ((line = br.readLine()) != null) {
-                    String[] values = line.split(",");
-                    String id = values[0];
-                    String name = values[1];
-                    double price = Double.parseDouble(values[2]);
-                    inventory.add(new Product(id, name, price));
+                while ((line = reader.readLine()) != null) {
+                    String[] data = line.split(",");
+                    String id = data[0];
+                    String name = data[1];
+                    double price = Double.parseDouble(data[2]);
+                    int quantity = Integer.parseInt(data[3]);
+                    products.add(new Product(id, name, price, quantity));
                 }
             } catch (IOException e) {
-                System.out.println("Error loading inventory: " + e.getMessage());
+                System.err.println("Error loading products: " + e.getMessage());
             }
         }
-    }
 
     public static void displayProducts(ArrayList<Store> inventory, ArrayList<Store> cart, Scanner scanner) {
         // This method should display a list of products from the inventory,
