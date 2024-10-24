@@ -1,41 +1,38 @@
 package com.pluralsight;
+
 public class Product {
-    private String id;
-    private String name;
+    private String sku;
+    private String productName;
     private double price;
-    private int quantity;
+    private String department;
 
-    public Product(String id, String name, double price, int quantity) {
-        this.id = id;
-        this.name = name;
+    public Product(String sku, String productName, double price, String department) {
+        this.sku = sku;
+        this.productName = productName;
         this.price = price;
-        this.quantity = quantity;
+        this.department = department;
     }
 
-    // Getters and setters for Product attributes
-    public String getId() {
-        return id;
+    public String getSku() {
+        return sku;
     }
 
-    public String getName() {
-        return name;
+    public String getProductName() {
+        return productName;
     }
 
     public double getPrice() {
         return price;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public String getDepartment() {
+        return department;
     }
 
     @Override
     public String toString() {
-        return String.format("%s | %s | $%.2f | %d in stock", id, name, price, quantity);
+        return String.format("%s | %s | $%.2f | %s", sku, productName, price, department);
     }
 }
+
 
