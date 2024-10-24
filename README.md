@@ -1,17 +1,20 @@
-# Project Title
+# Online Store
 
 ## Description of the Project
 
-Briefly describe what this Java console application does. Mention its purpose and who the intended users are. Explain the main functionality and what problems it aims to solve.
+The Online Store application lets you pretend to shop online. You can browse products, search for items, add or remove things from your cart, and check out with a receipt.
 
 ![Class Diagram](path/to/your/class_diagram.png)
 
 ## User Stories
 
-List the user stories that guided the development of your application. Format these stories as: "As a [type of user], I want [some goal] so that [some reason]."
-
-- As a user, I want to be able to input my data, so that the application can process it accordingly.
-- As a user, I want to receive immediate feedback, so I can understand what to do next.
+- As a user, I want to view all available products, so that I can choose what to buy.
+- As a user, I want to search for products by name or department, so that I can find items quickly.
+- As a user, I want to add items to my cart, so that I can purchase multiple products at once.
+- As a user, I want to remove items from my cart, so that I can adjust my selections before checkout.
+- As a user, I want to see the total amount in my cart, so that I can stay within my budget.
+- As a user, I want to check out and receive a receipt, so that I have a record of my purchase.
+- As a user, I want to receive clear instructions at each step, so that I know what to do next.
 
 ## Setup
 
@@ -39,32 +42,27 @@ Follow these steps to get your application running within IntelliJ IDEA:
 
 ## Demo
 
-Include screenshots or GIFs that show your application in action. Use tools like [Giphy Capture](https://giphy.com/apps/giphycapture) to record a GIF of your application.
-
-![Application Screenshot](path/to/your/screenshot.png)
+Still working on this
 
 ## Future Work
 
-Outline potential future enhancements or functionalities you might consider adding:
+Here are some potential enhancements for future updates:
 
-- Additional feature to be developed.
-- Improvement of current functionalities.
+- User Accounts: Allow users to create accounts and save their shopping history.
+- Payment Integration: Add options for different payment methods.
+- Product Reviews: Enable users to leave reviews and ratings for products.
 
 ## Resources
 
 List resources such as tutorials, articles, or documentation that helped you during the project.
 
-- [Java Programming Tutorial](https://www.example.com)
-- [Effective Java](https://www.example.com)
+- [DocsOracle] (https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html)
 
 ## Team Members
 
-- **Name 1** - Specific contributions or roles.
-- **Name 2** - Specific contributions or roles.
+- **Name 1** - Carmen Alba
 
 ## Thanks
 
-Express gratitude towards those who provided help, guidance, or resources:
-
-- Thank you to [Mentor's Name] for continuous support and guidance.
-- A special thanks to all teammates for their dedication and teamwork.
+- Thank you to Aaron for all your help and support.
+- A big thanks to Corrie for encouraging me through the project.
